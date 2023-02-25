@@ -35,3 +35,27 @@
 //     var nome = 'João'
 // }
 // console.log('Oi, ' + nome)
+// var é antigo e não é recomendado o seu uso.
+
+// const n1 = 2
+// const n2 = '3'
+// // coerção implícita
+// const n3 = n1 + n2
+// console.log(n3)
+// // coerção explícita
+// const n4 = n1 + Number(n2)
+// console.log(n4)
+
+// usar === para comparação, nunca usar ==.
+// console.log(1 == 1)
+// console.log(1 == '1')
+// console.log(1 === 1)
+// console.log(1 === '1')
+
+console.log(true == 1)
+console.log(1 == [1])
+console.log(false == 0)
+console.log(null == null)
+console.log(null == undefined)
+console.log([] == false)
+console.log([] == [])
