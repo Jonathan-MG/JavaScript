@@ -65,12 +65,12 @@
 // minhaPromise.then((resultado) => {console.log(resultado)});
 
 // Exercicío - Escrever "calculoRapidim" usando uma new Promise.
-function calculoRapidim2(n){
-    const p = new Promise(function(resolve, reject){
-        let res = ((n * (n + 1)) / 2);
-        resolve(res)
-    });
-    return p;
-}
-const pConcluida = calculoRapidim2(10);
-pConcluida.then(res => console.log(res));
+// function calculoRapidim2(n){
+//     const p = new Promise(function(resolve, reject){
+//         let res = ((n * (n + 1)) / 2);
+//         resolve(res)
+//     });
+//     return p;
+// }
+// const pConcluida = calculoRapidim2(10);
+// pConcluida.then(res => console.log(res));
