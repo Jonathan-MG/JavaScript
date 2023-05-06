@@ -1,0 +1,18 @@
+{
+  "name": "aula-08",
+  "version": "1.0.0",
+  "description": "- Instalar o thunderclient\r - npm init -y, instala o package.\r - npm install express, instala o package-lock.\r - npm i nodemon --save-dev, Sobe o node automaticamente.\r - install ou i podem ser usados.\r - adicionar o .env em cada microserviço com o PORT e o número da porta entre \"\".\r - npm i dotenv, é quem consegue ler o .env.\r - instalar a extensão thunderclient.\r - adicionar \"start\": \"nodemon index.js\" no package.json. \r - npm start.\r - dentro do post do thunderclient, para gerar string aleatória usa a seguinte notação \"texto\": \"{{#string}}\".",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+  
+}
