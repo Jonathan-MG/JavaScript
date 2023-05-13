@@ -1,0 +1,90 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Microservicos",
+    "dateExported": "2023-05-06T12:11:21.275Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "1fe1a33d-2a18-4b2a-9794-05d11a336c29",
+            "name": "Lembretes",
+            "containerId": "",
+            "created": "2023-05-06T11:07:32.409Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "f928c99c-0ea0-43ba-8a47-bac0bd7a88be",
+            "name": "Observações",
+            "containerId": "",
+            "created": "2023-05-06T12:01:16.841Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "7c670487-d4ed-418c-9b0d-e6a5316d4dee",
+            "colId": "e817806b-a957-4cc8-9453-8bd4827e6c45",
+            "containerId": "1fe1a33d-2a18-4b2a-9794-05d11a336c29",
+            "name": "Obter Lembretes",
+            "url": "localhost:4000/Lembretes",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-05-06T11:07:32.409Z",
+            "modified": "2023-05-06T11:07:32.409Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "265a38d3-a103-4441-a611-ff7788e75717",
+            "colId": "e817806b-a957-4cc8-9453-8bd4827e6c45",
+            "containerId": "1fe1a33d-2a18-4b2a-9794-05d11a336c29",
+            "name": "Salvar Lembrete",
+            "url": "localhost:4000/Lembretes",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-05-06T11:07:32.410Z",
+            "modified": "2023-05-06T11:07:32.410Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"texto\": \"{{#string}}\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f8ec84d3-235a-48ef-9a3a-9bc0a3d421f6",
+            "colId": "e817806b-a957-4cc8-9453-8bd4827e6c45",
+            "containerId": "f928c99c-0ea0-43ba-8a47-bac0bd7a88be",
+            "name": "Obter Observações",
+            "url": "localhost:5000/Lembretes/1/Observacoes",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-05-06T12:01:49.827Z",
+            "modified": "2023-05-06T12:02:49.952Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "de3d89e3-35b0-42b6-8917-d614c81b2d94",
+            "colId": "e817806b-a957-4cc8-9453-8bd4827e6c45",
+            "containerId": "f928c99c-0ea0-43ba-8a47-bac0bd7a88be",
+            "name": "Salvar Observação",
+            "url": "localhost:5000/Lembretes/1/Observacoes",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-05-06T12:03:21.093Z",
+            "modified": "2023-05-06T12:07:06.017Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"texto\":\"{{#string}}\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
