@@ -8,7 +8,15 @@
 - adicionar o .env em cada microserviço com o PORT e o número da porta entre "".
 - npm i dotenv, é quem consegue ler o .env.
 - instalar a extensão thunderclient.
-- adicionar "start": "nodemon index.js" no package.json da pasta trabalha. 
+- adicionar "start": "nodemon index.js" no package.json da pasta trabalho. 
 - npm start roda o start, para rodar o start:dev precisa colocar o "run".
 - dentro do post do thunderclient, para gerar string aleatória usa a seguinte notação "texto": "{{#string}}".
 - npm i uuid, instalar para gerar os ID para contadores.
+- Barramento:
+- - npm i express axios
+- Adicionar nos Outros:
+- - npm i axios
+- PROJETO:
+- - git tag v1.0.0 -a -m "Entrega do dia 20/05." => O tag se refere ao ultimo commit feito, caso não seja especificado.
+- - git push origin main --tags
+- - git push origin v1.0.0
