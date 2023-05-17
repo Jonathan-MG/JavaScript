@@ -23,7 +23,7 @@ app.post('/Lembretes/:id/Observacoes', (req, res) => {
     axios.post(
         'http://localhost:10000/eventos',{
             tipo: 'ObservacaoCriada',
-            dados: {id, texto}
+            dados: {idObs, texto}
     })
     res.status(201).json(observacoesDoLembrete)
 })
