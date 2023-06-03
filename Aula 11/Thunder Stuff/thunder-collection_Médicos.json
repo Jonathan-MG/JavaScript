@@ -1,0 +1,56 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Médicos",
+    "dateExported": "2023-06-03T12:26:07.461Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "925b4118-b8e0-4c54-88e2-de4a574a0c57",
+            "colId": "17c7d6e5-d9ce-4b96-a1d3-d005bd73b47a",
+            "containerId": "",
+            "name": "Exibir Médicos",
+            "url": "localhost:4000/medicos",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-03T11:03:06.031Z",
+            "modified": "2023-06-03T11:03:37.593Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b5b3125f-3af4-4778-b6cf-04852d7528ba",
+            "colId": "17c7d6e5-d9ce-4b96-a1d3-d005bd73b47a",
+            "containerId": "",
+            "name": "Exibir Pacientes",
+            "url": "localhost:4000/pacientes",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-06-03T11:15:41.724Z",
+            "modified": "2023-06-03T11:15:52.910Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c0b73280-2953-4abb-b9f8-2af9e8d6e35e",
+            "colId": "17c7d6e5-d9ce-4b96-a1d3-d005bd73b47a",
+            "containerId": "",
+            "name": "Adicionar Médico",
+            "url": "localhost:4000/adicionar-medico",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-06-03T11:31:59.773Z",
+            "modified": "2023-06-03T12:23:05.626Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"crm\": 729485,\n  \"nome\": \"Joselito\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
