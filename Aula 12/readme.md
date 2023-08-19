@@ -25,8 +25,7 @@ npm i express axios
 
 npm i nodemon --save-dev
 
+PARA RODAR: 
 
-## Entrega de realease 
-``` git tag 1.0.0 -a "Entrega dia 20.05 - este é um exemplo ```
-Não esquecer de fazer o push das tags 
-
+Em todas as pastas:
+npm i axios express dotenv nodemon uuid

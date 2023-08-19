@@ -15,9 +15,9 @@ app.post('/lembretes', (req,res)=>{
     id = id + 1
     lembretes[id] = {id,texto}
     axios.post(
-        'http://localhost:10000',{
-            tipo : 'LembreCriado',
-            payload: {id, texto}
+        'http://localhost:10000/eventos',{
+            tipo : 'LembreteCriado',
+            dados: {id, texto}
         }
     )
     res.status(201).json(lembretes[id])
@@ -28,8 +28,13 @@ app.get('/lembretes',(req,res)=>{
 })
 
 app.post('/eventos', (req,res)=>{
-    console.log(req.body)
-    res.end()
+    try{
+        console.log(req.body)
+    }
+    catch (e){
+
+    }
+    res.status(200).json({msg:'Ok'})
 })
 
 const PORT = process.env.PORT || 4000
