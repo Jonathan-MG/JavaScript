@@ -2,6 +2,8 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 app.use(express.json())
+const axios = require('axios')
+const PORT = process.env.PORT || 6000
 
 const baseConsulta = {}
 
@@ -19,6 +21,11 @@ const funcoes = {
         const observacoes = baseConsulta[observacao.lembreteId]['observacoes'] || []
         observacoes.push(observacao)
         baseConsulta[observacao.lembreteId]['observacoes'] = observacoes
+    },
+    ObservacaoAtualizada: (observacao) => {
+        const observacoes = baseConsulta[observacao.lembreteId]['observacoes']
+        const indice = observacoes.findIndex(o => o.id === observacao.id)
+        observacoes[indice] = observacao
     }
 }
 
@@ -38,6 +45,12 @@ app.post('/eventos',(req,res)=>{
     res.status(200).json({msg: 'Ok'})
 })
 
-app.listen(process.env.PORT,()=>{
-    console.log(`Consulta. Porta ${process.env.PORT}`);
+app.listen(PORT,async ()=>{
+    const resp = await axios.get('http://localhost:10000/eventos')
+    resp.data.forEach((evento) => {
+        try{
+            funcoes[evento.tipo](evento.dados)
+        }catch(e){}
+    })
+    console.log(`Consulta. Porta ${PORT}`);
 })

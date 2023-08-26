@@ -1,5 +1,4 @@
 require('dotenv').config()
-
 //POST localhost:4000/lembretes {"texto": "Fazer Café"}
 //GET localhost:4000/lembretes
 const express = require('express')

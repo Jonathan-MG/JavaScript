@@ -1,49 +1,63 @@
 {
     "client": "Thunder Client",
     "collectionName": "2023 - 1 - Maua - ECM516 - mss",
-    "dateExported": "2023-05-06T12:12:08.691Z",
+    "dateExported": "2023-08-26T11:59:50.657Z",
     "version": "1.1",
     "folders": [
         {
-            "_id": "39440987-18e7-48df-a112-ead474ddaab5",
+            "_id": "5f0f7b40-96f0-4200-b66b-7d26b324180a",
             "name": "Observacoes",
             "containerId": "",
-            "created": "2023-05-06T12:01:13.595Z",
+            "created": "2023-08-26T11:22:22.255Z",
             "sortNum": 10000
         },
         {
-            "_id": "f74e371f-599c-40df-91f8-29e47f970576",
+            "_id": "0f156de1-100f-49eb-a675-11724909e1a7",
             "name": "Lembretes",
             "containerId": "",
-            "created": "2023-05-06T12:01:21.522Z",
+            "created": "2023-08-26T11:22:22.256Z",
             "sortNum": 20000
+        },
+        {
+            "_id": "04bcb038-f617-4a9f-8ff9-388ca2c7a95e",
+            "name": "Consulta",
+            "containerId": "",
+            "created": "2023-08-26T11:24:33.039Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "5d5a7400-025e-4c35-ba34-9002db0b0fcc",
+            "name": "Classificação",
+            "containerId": "",
+            "created": "2023-08-26T11:25:00.923Z",
+            "sortNum": 40000
         }
     ],
     "requests": [
         {
-            "_id": "3e2d6fc7-d158-40f8-a7c7-c18247fd8d11",
-            "colId": "d65ce223-a43a-43c6-974f-d3916d90d6c8",
+            "_id": "9fa72fd9-acbf-4b97-bea7-63613492bb39",
+            "colId": "a515f0b0-396e-4416-a448-05e1ddcf36b6",
             "containerId": "70478bb4-12fb-497b-b849-59fdb0fe561b",
             "name": "localhost:4000/lembretes",
             "url": "localhost:4000/lembretes",
             "method": "GET",
             "sortNum": 10000,
-            "created": "2023-05-06T11:12:15.045Z",
-            "modified": "2023-05-06T11:12:15.045Z",
+            "created": "2023-08-26T11:22:22.255Z",
+            "modified": "2023-08-26T11:22:22.255Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "3b468803-01b6-4b0a-82af-469e4aa4eae9",
-            "colId": "d65ce223-a43a-43c6-974f-d3916d90d6c8",
-            "containerId": "f74e371f-599c-40df-91f8-29e47f970576",
+            "_id": "57aa6a06-58cc-4f61-89cf-5d882942c96a",
+            "colId": "a515f0b0-396e-4416-a448-05e1ddcf36b6",
+            "containerId": "0f156de1-100f-49eb-a675-11724909e1a7",
             "name": "Post lembretes",
             "url": "localhost:4000/lembretes",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2023-05-06T11:12:15.048Z",
-            "modified": "2023-05-06T12:01:24.413Z",
+            "created": "2023-08-26T11:22:22.258Z",
+            "modified": "2023-08-26T11:22:22.258Z",
             "headers": [],
             "params": [],
             "body": {
@@ -54,15 +68,15 @@
             "tests": []
         },
         {
-            "_id": "91b401d6-34c6-4bfe-af41-6d1e78b0ff03",
-            "colId": "d65ce223-a43a-43c6-974f-d3916d90d6c8",
+            "_id": "d7c5ff87-01cc-40c1-bde3-22ccc6f1800d",
+            "colId": "a515f0b0-396e-4416-a448-05e1ddcf36b6",
             "containerId": "70478bb4-12fb-497b-b849-59fdb0fe561b",
             "name": "localhost:4000/lembretes",
             "url": "localhost:4000/lembretes",
             "method": "POST",
             "sortNum": 20000,
-            "created": "2023-05-06T11:12:15.046Z",
-            "modified": "2023-05-06T11:12:15.046Z",
+            "created": "2023-08-26T11:22:22.256Z",
+            "modified": "2023-08-26T11:22:22.256Z",
             "headers": [],
             "params": [],
             "body": {
@@ -73,50 +87,64 @@
             "tests": []
         },
         {
-            "_id": "d0cb65ed-27f0-4230-867b-8de79c7e030a",
-            "colId": "d65ce223-a43a-43c6-974f-d3916d90d6c8",
+            "_id": "868e6ee1-de00-4e5b-8a2d-ba85a4bcfad3",
+            "colId": "a515f0b0-396e-4416-a448-05e1ddcf36b6",
             "containerId": "70478bb4-12fb-497b-b849-59fdb0fe561b",
             "name": "Obter Lembretes",
             "url": "localhost:4000/lembretes",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2023-05-06T11:12:15.047Z",
-            "modified": "2023-05-06T11:12:15.047Z",
+            "created": "2023-08-26T11:22:22.257Z",
+            "modified": "2023-08-26T11:22:22.257Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "2c81962a-cc6f-4a4d-a67a-7c9734ccf454",
-            "colId": "d65ce223-a43a-43c6-974f-d3916d90d6c8",
-            "containerId": "39440987-18e7-48df-a112-ead474ddaab5",
+            "_id": "e368e1c0-cdc0-4aec-b010-99a7a7cfc9d7",
+            "colId": "a515f0b0-396e-4416-a448-05e1ddcf36b6",
+            "containerId": "5f0f7b40-96f0-4200-b66b-7d26b324180a",
             "name": "Obter_Observacoes",
             "url": "localhost:5000/lembretes/1/observacoes",
             "method": "GET",
             "sortNum": 60000,
-            "created": "2023-05-06T12:01:56.752Z",
-            "modified": "2023-05-06T12:02:28.932Z",
+            "created": "2023-08-26T11:22:22.259Z",
+            "modified": "2023-08-26T11:22:22.259Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "14e33327-a1a0-4ce7-930e-1302f005c9bc",
-            "colId": "d65ce223-a43a-43c6-974f-d3916d90d6c8",
-            "containerId": "39440987-18e7-48df-a112-ead474ddaab5",
+            "_id": "69607e1a-ca78-4b5d-910b-6fb70bb7c4f8",
+            "colId": "a515f0b0-396e-4416-a448-05e1ddcf36b6",
+            "containerId": "5f0f7b40-96f0-4200-b66b-7d26b324180a",
             "name": "Salvar_Observacao",
             "url": "localhost:5000/lembretes/1/observacoes",
             "method": "POST",
             "sortNum": 70000,
-            "created": "2023-05-06T12:03:18.762Z",
-            "modified": "2023-05-06T12:05:05.583Z",
+            "created": "2023-08-26T11:22:22.260Z",
+            "modified": "2023-08-26T11:32:19.632Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"texto\" : \"{{#string}}\"\n}",
+                "raw": "{\n  \"texto\": \"{{#string}}\"\n}",
                 "form": []
             },
+            "tests": []
+        },
+        {
+            "_id": "827f6869-6484-44da-8e9c-5484cc8fbdfc",
+            "colId": "a515f0b0-396e-4416-a448-05e1ddcf36b6",
+            "containerId": "04bcb038-f617-4a9f-8ff9-388ca2c7a95e",
+            "name": "Obter base consolidada",
+            "url": "localhost:6000/lembretes",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-08-26T11:27:22.293Z",
+            "modified": "2023-08-26T11:27:50.016Z",
+            "headers": [],
+            "params": [],
             "tests": []
         }
     ]

@@ -6,24 +6,35 @@ app.use(express.json())
 
 const PORT = process.env.PORT || 10000
 
+const eventos = []
+
 // localhost:10000/eventos
-app.post('/eventos', (req,res)=>{
+app.post('/eventos', async (req,res)=>{
     // {tipo: 'LembreteCriado' , dado: {id:1, texto = "fazer Cafe"}}
     const evento = req.body
+    eventos.push(evento)
     console.log(evento)
     // Lembretes
-    axios.post('http://localhost:4000/eventos',evento)
-
+    try{
+        await axios.post('http://localhost:4000/eventos',evento)
+    }catch(e){}
     // Observações
-    axios.post('http://localhost:5000/eventos',evento)
-
+    try{
+        await axios.post('http://localhost:5000/eventos',evento)
+    }catch(e){}
     // Consulta
-    axios.post('http://localhost:6000/eventos',evento)
-
+    try{
+       await axios.post('http://localhost:6000/eventos',evento)
+    }catch(e){}
     // Classificação
-    axios.post('http://localhost:7000/eventos',evento)
-
+    try{
+        await axios.post('http://localhost:7000/eventos',evento)
+    }catch(e){}
     res.status(200).send({msg: 'ok'})
+})
+
+app.get('/eventos', (req,res) => {
+    res.json(eventos)
 })
 
 app.listen(
