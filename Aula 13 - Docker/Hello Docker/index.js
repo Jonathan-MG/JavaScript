@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-app.use(express.json)
+app.use(express.json())
 
 app.get('/hey-docker',(req,res)=>{
     res.status(200).json({
@@ -8,5 +8,5 @@ app.get('/hey-docker',(req,res)=>{
     })
 })
 
-app.listen(5200,()=> console.log('up and running inside Docker'))
+app.listen(50000,()=> console.log('up and running inside Docker'))
 
