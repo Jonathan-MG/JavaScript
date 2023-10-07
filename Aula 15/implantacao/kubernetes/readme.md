@@ -1,0 +1,3 @@
+- Comandos para criação/remoção dos deployments/pods
+- - "kubectl apply -f lembretes-deployments.yaml"
+- - "kubectl delete -f lembretes-deployments.yaml"
