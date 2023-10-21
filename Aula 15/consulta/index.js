@@ -46,7 +46,7 @@ app.post('/eventos',(req,res)=>{
 })
 
 app.listen(PORT,async ()=>{
-    const resp = await axios.get('http://localhost:10000/eventos')
+    const resp = await axios.get('http://barramento-de-eventos-service:10000/eventos')
     resp.data.forEach((evento) => {
         try{
             funcoes[evento.tipo](evento.dados)

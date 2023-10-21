@@ -14,7 +14,7 @@ app.post('/lembretes', (req,res)=>{
     id = id + 1
     lembretes[id] = {id,texto}
     axios.post(
-        'http://localhost:10000/eventos',{
+        'http://barramento-de-eventos-service:10000/eventos',{
             tipo : 'LembreteCriado',
             dados: {id, texto}
         }

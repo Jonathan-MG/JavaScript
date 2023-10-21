@@ -19,3 +19,18 @@ spec:
           #   limits:
           #     memory: 256Mi
           #     cpu: 1
+--- 
+apiVersion: v1
+kind: Service
+metadata: 
+  name: lembretes-clusterip-service
+spec:
+  # porta externa, acessível fora do cluster
+  type: ClusterIP
+  selector:
+    app: lembretes
+  ports:
+    - name: lembretes
+      protocol: TCP
+      port: 4000
+      targetPort: 4000

@@ -1,0 +1,3 @@
+- Comando para criar a imagem:
+- - "docker build -t jonathanmgomes/ecm516-20232-barramento-de-eventos ."
+- - "docker push jonathanmgomes/ecm516-20232-barramento-de-eventos"

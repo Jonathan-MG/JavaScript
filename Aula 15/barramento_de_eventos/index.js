@@ -16,19 +16,19 @@ app.post('/eventos', async (req,res)=>{
     console.log(evento)
     // Lembretes
     try{
-        await axios.post('http://localhost:4000/eventos',evento)
+        await axios.post('http://lembretes-clusterip-service:4000/eventos',evento)
     }catch(e){}
     // Observações
     try{
-        await axios.post('http://localhost:5000/eventos',evento)
+        await axios.post('http://observacoes-clusterip-service:5000/eventos',evento)
     }catch(e){}
     // Consulta
     try{
-       await axios.post('http://localhost:6000/eventos',evento)
+       await axios.post('http://consulta-clusterip-service:6000/eventos',evento)
     }catch(e){}
     // Classificação
     try{
-        await axios.post('http://localhost:7000/eventos',evento)
+        await axios.post('http://classificacao-clusterip-service:7000/eventos',evento)
     }catch(e){}
     res.status(200).send({msg: 'ok'})
 })
