@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: lembretes-deployment
+  name: barramento-de-eventos-deployment
 spec: 
   replicas: 1 # Quantas cópias
   selector: 
     matchLabels:
-      app: lembretes
+      app: barramento-de-eventos
   template:
     metadata: 
       labels: 
-        app: lembretes
+        app: barramento-de-eventos
     spec:
       containers: 
-        - name: lembretes # '-' significa que é uma coleção.
-          image: jonathanmgomes/ecm516-20232-lembretes
+        - name: barramento-de-eventos # '-' significa que é uma coleção.
+          image: jonathanmgomes/ecm516-20232-barramento-de-eventos
           # resources:
           #   limits:
           #     memory: 256Mi

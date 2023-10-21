@@ -1,2 +1,3 @@
 - Comando para criar a imagem:
 - - "docker build -t jonathanmgomes/ecm516-20232-lembretes:0.0.1 ."
+- - "docker build -t jonathanmgomes/ecm516-20232-lembretes .   "
