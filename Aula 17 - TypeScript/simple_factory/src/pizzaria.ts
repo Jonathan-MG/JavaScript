@@ -212,16 +212,16 @@ let franquias: PizzaStore[] = [
 // let PizzaStore1 = new PizzaStore(new SimplePizzaFactory());
 // console.log(franquias[2].PedirPizza('queijo'));
 async function ifood(loja: any[]) {
-  const sabor = await input.checkboxes(`Escolha o sabor de sua pizza:`, ['Queijo', 'Peperoni', 'Molusco', 'Vegetariana']);
-  const local = await input.checkboxes(`Escolha qual filial produzirá sua pizza:`, ['Matriz', 'Nova York', 'Chicago']);
-  if(local[0] === 'Matriz'){
-    console.log(loja[0].PedirPizza(sabor[0]));
+  const sabor = await input.select(`Escolha o sabor de sua pizza:`, ['Queijo', 'Peperoni', 'Molusco', 'Vegetariana']);
+  const local = await input.select(`Escolha qual filial produzirá sua pizza:`, ['Matriz', 'Nova York', 'Chicago']);
+  if(local === 'Matriz'){
+    console.log(loja[0].PedirPizza(sabor));
   }
-  else if(local[0] === 'Nova York'){
-    console.log(loja[1].PedirPizza(sabor[0]));
+  else if(local === 'Nova York'){
+    console.log(loja[1].PedirPizza(sabor));
   }
-  else if(local[0] === 'Chicago'){
-    console.log(loja[2].PedirPizza(sabor[0]));
+  else if(local === 'Chicago'){
+    console.log(loja[2].PedirPizza(sabor));
   }
 }
 ifood(franquias);
