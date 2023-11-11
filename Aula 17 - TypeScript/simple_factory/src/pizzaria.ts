@@ -26,6 +26,34 @@ class PizzaDeQueijo extends Pizza{
         console.log('Empacotando pizza de queijo...');
     }
 }
+class PizzaDeQueijoDeNY extends PizzaDeQueijo{
+    preparar(): void{
+        console.log('Preparando pizza de queijo estilo Nova York...');
+    }
+    assar(): void{
+        console.log('Assando pizza de queijo estilo Nova York...');
+    }
+    cortar(): void{
+        console.log('Cortando pizza de queijo estilo Nova York...');
+    }
+    empacotar(): void{
+        console.log('Empacotando pizza de queijo estilo Nova York...');
+    }
+}
+class PizzaDeQueijoDeCH extends PizzaDeQueijo{
+    preparar(): void{
+        console.log('Preparando pizza de queijo estilo Chicago...');
+    }
+    assar(): void{
+        console.log('Assando pizza de queijo estilo Chicago...');
+    }
+    cortar(): void{
+        console.log('Cortando pizza de queijo estilo Chicago...');
+    }
+    empacotar(): void{
+        console.log('Empacotando pizza de queijo estilo Chicago...');
+    }
+}
 class PizzaDeGrega extends Pizza{
     preparar(): void{
         console.log('Preparando pizza de grega...');
@@ -54,7 +82,34 @@ class PizzaPeperoni extends Pizza{
         console.log('Empacotando pizza de peperoni...');
     }
 }
-
+class PizzaPeperoniDeNY extends PizzaPeperoni{
+    preparar(): void{
+        console.log('Preparando pizza de peperoni estilo Nova York...');
+    }
+    assar(): void{
+        console.log('Assando pizza de peperoni estilo Nova York...');
+    }
+    cortar(): void{
+        console.log('Cortando pizza de peperoni estilo Nova York...');
+    }
+    empacotar(): void{
+        console.log('Empacotando pizza de peperoni estilo Nova York...');
+    }
+}
+class PizzaPeperoniDeCH extends PizzaPeperoni{
+    preparar(): void{
+        console.log('Preparando pizza de peperoni estilo Chicago...');
+    }
+    assar(): void{
+        console.log('Assando pizza de peperoni estilo Chicago...');
+    }
+    cortar(): void{
+        console.log('Cortando pizza de peperoni estilo Chicago...');
+    }
+    empacotar(): void{
+        console.log('Empacotando pizza de peperoni estilo Chicago...');
+    }
+}
 class PizzaDeMolusco extends Pizza{
     preparar(): void{
         console.log('Preparando pizza de molusco...');
@@ -83,7 +138,6 @@ class PizzaVegetariana extends Pizza{
         console.log('Empacotando pizza vegetariana...');
     }
 }
-
 class SimplePizzaFactory{
     criarPizza(tipo: string): Pizza | null{
         let pizza: Pizza | null = null;
@@ -105,7 +159,30 @@ class SimplePizzaFactory{
         return pizza;
     }
 }
-
+class SimplePizzaFactoryDeNY extends SimplePizzaFactory{
+    criarPizza(tipo: string): Pizza | null{
+        switch(tipo){
+            case 'queijo':
+                return new PizzaDeQueijoDeNY();
+            case 'peperoni':
+                return new PizzaPeperoniDeNY();
+            default:
+                return null;
+        }
+    }
+}
+class simplePizzaFactoryDeCH extends SimplePizzaFactory{
+    criarPizza(tipo: string): Pizza | null{
+        switch(tipo){
+            case 'queijo':
+                return new PizzaDeQueijoDeCH();
+            case 'peperoni':
+                return new PizzaPeperoniDeCH();
+            default:
+                return null;
+        }
+    }
+}
 class PizzaStore{
     //private simplePizzaFactory: SimplePizzaFactory;
     constructor(private simplePizzaFactory: SimplePizzaFactory){
@@ -121,9 +198,13 @@ class PizzaStore{
         return pizza;
         // este código não varia
     }
-
 }
+let franquias: PizzaStore[] = [
+    new PizzaStore(new SimplePizzaFactory()),
+    new PizzaStore(new SimplePizzaFactoryDeNY()),
+    new PizzaStore(new simplePizzaFactoryDeCH())
+]
 //console.log(PedirPizza());
 //let pizza: Pizza |  null = PedirPizza('molusco')
-let PizzaStore1 = new PizzaStore(new SimplePizzaFactory());
-console.log(PizzaStore1.PedirPizza('molusco'));
+// let PizzaStore1 = new PizzaStore(new SimplePizzaFactory());
+console.log(franquias[2].PedirPizza('queijo'));
