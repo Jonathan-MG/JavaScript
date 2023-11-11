@@ -22,3 +22,6 @@ npx tsc --init
 ```
 npm i ts-node --save-dev
 ```
+
+### Para rodar
+npm run start:dev
