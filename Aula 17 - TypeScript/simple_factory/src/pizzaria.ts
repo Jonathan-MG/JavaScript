@@ -1,3 +1,4 @@
+const input = require('input');
 class Pizza{
     preparar(): void{
         console.log('Preparando pizza...');
@@ -142,18 +143,18 @@ class SimplePizzaFactory{
     criarPizza(tipo: string): Pizza | null{
         let pizza: Pizza | null = null;
         tipo = tipo.toLowerCase();
-        if(tipo === 'queijo'){
+        if(tipo === 'Queijo'){
             pizza = new PizzaDeQueijo();
         }// }else if(tipo === 'grega'){
         //     pizza = new PizzaDeGrega();
         // }
-        else if(tipo === 'peperoni'){
+        else if(tipo === 'Peperoni'){
             pizza = new PizzaPeperoni();
         }
-        else if(tipo === 'molusco'){
+        else if(tipo === 'Molusco'){
             pizza = new PizzaDeMolusco();
         }
-        else if(tipo === 'vegetariana'){
+        else if(tipo === 'Vegetariana'){
             pizza = new PizzaVegetariana();
         }
         return pizza;
@@ -174,9 +175,9 @@ class SimplePizzaFactoryDeNY extends SimplePizzaFactory{
 class simplePizzaFactoryDeCH extends SimplePizzaFactory{
     criarPizza(tipo: string): Pizza | null{
         switch(tipo){
-            case 'queijo':
+            case 'Queijo':
                 return new PizzaDeQueijoDeCH();
-            case 'peperoni':
+            case 'Peperoni':
                 return new PizzaPeperoniDeCH();
             default:
                 return null;
@@ -207,4 +208,18 @@ let franquias: PizzaStore[] = [
 //console.log(PedirPizza());
 //let pizza: Pizza |  null = PedirPizza('molusco')
 // let PizzaStore1 = new PizzaStore(new SimplePizzaFactory());
-console.log(franquias[2].PedirPizza('queijo'));
+// console.log(franquias[2].PedirPizza('queijo'));
+async function ifood() { 
+  const sabor = await input.checkboxes(`Escolha o sabor de sua pizza:`, ['Queijo', 'Peperoni', 'Molusco', 'Vegetariana']);
+  const local = await input.checkboxes(`Escolha qual filial produzirá sua pizza:`, ['Matriz', 'Nova York', 'Chicago']);
+  if(local === 'Matriz'){
+    console.log(franquias[0].PedirPizza(sabor[0]));
+  }
+  else if(local === 'Nova York'){
+    console.log(franquias[1].PedirPizza(sabor[0]));
+  }
+  else{
+    console.log(franquias[2].PedirPizza(sabor[0]));
+  }
+}
+ifood();
