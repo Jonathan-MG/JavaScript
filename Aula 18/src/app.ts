@@ -10,7 +10,6 @@ import CacheService from "./CacheService";
 const cache = CacheService.getInstance();
 // cache.set("João", []);
 // console.log(cache.get("João"));
-
 async function listaTelefonica(cache: CacheService) {
     console.log("****************************************************************************");
     console.log("*********************** Bem Vindo a Lista Telefônica ***********************");
@@ -19,16 +18,12 @@ async function listaTelefonica(cache: CacheService) {
     console.log("2. Adicionar número de telefone");
     console.log("3. Ver números de um usuário");
     console.log("4. Sair");
-
     let continuar: boolean = true;
-
     while (continuar) {
-        let opcao = await input.text("Digite sua escolha:");
-
+        let opcao = await input.text("Digite sua escolha:", { default: 4 });
         let userName: string;
         let userNumber: string;
         let lista: any;
-
         switch (opcao) {
             case "1":
                 userName = await input.text("Digite o nome do usuário:");
@@ -44,7 +39,7 @@ async function listaTelefonica(cache: CacheService) {
                 lista = cache.get(userName);
                 console.log("Usuário: \t" + userName);
                 for (let i = 0; i < lista.length; i++) {
-                    let indice = i+1
+                    let indice = i + 1
                     console.log("Número " + indice + ": \t" + lista[i]);
                 }
                 break;
